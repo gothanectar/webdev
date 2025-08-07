@@ -1,0 +1,40 @@
+{
+  "name": "Thiago Hetzel - Desenvolvedor Web & Designer",
+  "short_name": "Thiago Hetzel",
+  "description": "Portfólio hiperdimensional de Thiago Hetzel, desenvolvedor web especialista em React, TypeScript e Node.js",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#020214",
+  "theme_color": "#00ffdd",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/siteweblogo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/siteweblogo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": [
+    "business",
+    "productivity",
+    "utilities"
+  ],
+  "lang": "pt-BR",
+  "dir": "ltr",
+  "scope": "/",
+  "screenshots": [
+    {
+      "src": "/siteweblogo.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    }
+  ]
+}

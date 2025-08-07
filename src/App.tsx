@@ -3,6 +3,7 @@ import Layout from './components/Layout/Layout';
 import Loader from './components/UI/Loader';
 import WhatsAppFloat from './components/UI/WhatsAppFloat';
 import Background3D from './components/3D/Background3D';
+import SEOHead from './components/SEO/SEOHead';
 import About from './components/Sections/About';
 import Services from './components/Sections/Services';
 import Portfolio from './components/Sections/Portfolio';
@@ -13,6 +14,7 @@ function App() {
 
   return (
     <>
+      <SEOHead />
       {isLoading && <Loader onLoadingComplete={() => setIsLoading(false)} />}
       <Background3D />
       <WhatsAppFloat />
