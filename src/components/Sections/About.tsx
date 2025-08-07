@@ -92,7 +92,7 @@ const About: React.FC = () => {
       {/* Título Principal com efeito melhorado */}
       <div style={{ marginBottom: '20px' }}>
         <h1 style={{
-          fontSize: '5em',
+          fontSize: window.innerWidth <= 768 ? '2.5em' : window.innerWidth <= 1024 ? '3.5em' : '5em',
           fontWeight: '800',
           background: 'linear-gradient(45deg, var(--primary-color), var(--secondary-color), var(--primary-color))',
           backgroundSize: '200% 200%',
@@ -101,21 +101,23 @@ const About: React.FC = () => {
           backgroundClip: 'text',
           marginBottom: '10px',
           textShadow: '0 0 40px rgba(0, 255, 221, 0.6)',
-          letterSpacing: '3px',
+          letterSpacing: window.innerWidth <= 768 ? '1px' : '3px',
           animation: 'gradientShift 3s ease-in-out infinite, fadeInUp 1.2s ease-out',
-          position: 'relative'
+          position: 'relative',
+          textAlign: 'center'
         }}>
           DESENVOLVEDOR
         </h1>
         
         <h2 style={{
-          fontSize: '3.2em',
+          fontSize: window.innerWidth <= 768 ? '1.8em' : window.innerWidth <= 1024 ? '2.5em' : '3.2em',
           fontWeight: '500',
           color: 'var(--secondary-color)',
           marginBottom: '0',
           textShadow: '0 0 25px rgba(255, 0, 204, 0.6)',
-          letterSpacing: '2px',
-          animation: 'fadeInUp 1.4s ease-out'
+          letterSpacing: window.innerWidth <= 768 ? '1px' : '2px',
+          animation: 'fadeInUp 1.4s ease-out',
+          textAlign: 'center'
         }}>
           & DESIGN
         </h2>
@@ -139,12 +141,13 @@ const About: React.FC = () => {
         animation: 'fadeInUp 1.8s ease-out'
       }}>
         <p style={{
-          fontSize: '2em',
+          fontSize: window.innerWidth <= 768 ? '1.2em' : window.innerWidth <= 1024 ? '1.6em' : '2em',
           lineHeight: '1.5',
           color: 'var(--text-color)',
           marginBottom: '35px',
           fontWeight: '400',
-          textShadow: '0 0 10px rgba(224, 224, 255, 0.3)'
+          textShadow: '0 0 10px rgba(224, 224, 255, 0.3)',
+          padding: window.innerWidth <= 768 ? '0 10px' : '0'
         }}>
           Vamos criar seu <span style={{ 
             color: 'var(--primary-color)', 
@@ -154,12 +157,13 @@ const About: React.FC = () => {
         </p>
         
         <p style={{
-          fontSize: '1.6em',
+          fontSize: window.innerWidth <= 768 ? '1.1em' : window.innerWidth <= 1024 ? '1.3em' : '1.6em',
           lineHeight: '1.4',
           color: 'var(--primary-color)',
           marginBottom: '25px',
           fontWeight: '600',
-          textShadow: '0 0 15px rgba(0, 255, 221, 0.4)'
+          textShadow: '0 0 15px rgba(0, 255, 221, 0.4)',
+          padding: window.innerWidth <= 768 ? '0 10px' : '0'
         }}>
           Vamos fazer algo que marque, <span style={{ 
             color: 'var(--secondary-color)',
@@ -168,11 +172,12 @@ const About: React.FC = () => {
         </p>
         
         <p style={{
-          fontSize: '1.4em',
+          fontSize: window.innerWidth <= 768 ? '1em' : window.innerWidth <= 1024 ? '1.2em' : '1.4em',
           lineHeight: '1.6',
           color: 'var(--text-secondary)',
           fontWeight: '300',
-          opacity: '0.9'
+          opacity: '0.9',
+          padding: window.innerWidth <= 768 ? '0 15px' : '0'
         }}>
           Desenvolvimento web, HTML, TypeScript e Node.js moderno. Suas ideias em novos formatos modernos 
           com experiências digitais impactantes. Seus clientes ligados em você! Intuitivo e feito com tecnologia de ponta.
@@ -232,10 +237,13 @@ const About: React.FC = () => {
       {/* Call to Action melhorado */}
       <div style={{
         display: 'flex',
-        gap: '25px',
+        gap: window.innerWidth <= 768 ? '15px' : '25px',
         flexWrap: 'wrap',
         justifyContent: 'center',
-        animation: 'fadeInUp 2.2s ease-out'
+        animation: 'fadeInUp 2.2s ease-out',
+        flexDirection: window.innerWidth <= 768 ? 'column' : 'row',
+        alignItems: 'center',
+        padding: window.innerWidth <= 768 ? '0 20px' : '0'
       }}>
         <a 
           href="#portfolio"

@@ -127,7 +127,7 @@ const Portfolio: React.FC = () => {
         {/* Header da seção */}
         <div style={{ marginBottom: '60px' }}>
           <h2 style={{
-            fontSize: '4em',
+            fontSize: window.innerWidth <= 768 ? '2.5em' : window.innerWidth <= 1024 ? '3.2em' : '4em',
             fontWeight: '800',
             background: 'linear-gradient(45deg, var(--primary-color), var(--secondary-color))',
             WebkitBackgroundClip: 'text',
@@ -150,13 +150,14 @@ const Portfolio: React.FC = () => {
           }} />
           
           <p style={{
-            fontSize: '1.6em',
+            fontSize: window.innerWidth <= 768 ? '1.1em' : window.innerWidth <= 1024 ? '1.3em' : '1.6em',
             maxWidth: '800px',
             margin: '0 auto 40px',
             color: '#ffffff',
             lineHeight: '1.5',
             opacity: '0.9',
-            animation: 'fadeInUp 1.2s ease-out'
+            animation: 'fadeInUp 1.2s ease-out',
+            padding: window.innerWidth <= 768 ? '0 10px' : '0'
           }}>
             Projetos que <span style={{ color: 'var(--primary-color)', fontWeight: '600' }}>transformam ideias em realidade digital</span>. 
             Cada projeto é uma jornada única de criação e inovação.
@@ -211,10 +212,10 @@ const Portfolio: React.FC = () => {
         {/* Carrossel de projetos */}
         <div style={{
           position: 'relative',
-          maxWidth: '1000px',
+          maxWidth: window.innerWidth <= 768 ? '100%' : '1000px',
           margin: '0 auto',
           animation: 'fadeInUp 1.6s ease-out',
-          padding: '30px 20px'
+          padding: window.innerWidth <= 768 ? '10px 5px' : '30px 20px'
         }}>
           {/* Botões de navegação */}
           <button
@@ -222,16 +223,16 @@ const Portfolio: React.FC = () => {
             disabled={isTransitioning || filteredPortfolio.length <= 1}
             style={{
               position: 'absolute',
-              left: '-70px',
-              top: '50%',
-              transform: 'translateY(-50%)',
+              left: window.innerWidth <= 768 ? '10px' : '-70px',
+              top: window.innerWidth <= 768 ? '10px' : '50%',
+              transform: window.innerWidth <= 768 ? 'none' : 'translateY(-50%)',
               background: 'rgba(0, 255, 221, 0.1)',
               border: '2px solid var(--primary-color)',
               borderRadius: '50%',
-              width: '60px',
-              height: '60px',
+              width: window.innerWidth <= 768 ? '40px' : '60px',
+              height: window.innerWidth <= 768 ? '40px' : '60px',
               color: 'var(--primary-color)',
-              fontSize: '2em',
+              fontSize: window.innerWidth <= 768 ? '1.2em' : '2em',
               cursor: 'pointer',
               transition: 'all 0.3s ease',
               zIndex: 10,
@@ -261,16 +262,16 @@ const Portfolio: React.FC = () => {
             disabled={isTransitioning || filteredPortfolio.length <= 1}
             style={{
               position: 'absolute',
-              right: '-70px',
-              top: '50%',
-              transform: 'translateY(-50%)',
+              right: window.innerWidth <= 768 ? '10px' : '-70px',
+              top: window.innerWidth <= 768 ? '10px' : '50%',
+              transform: window.innerWidth <= 768 ? 'none' : 'translateY(-50%)',
               background: 'rgba(0, 255, 221, 0.1)',
               border: '2px solid var(--primary-color)',
               borderRadius: '50%',
-              width: '60px',
-              height: '60px',
+              width: window.innerWidth <= 768 ? '40px' : '60px',
+              height: window.innerWidth <= 768 ? '40px' : '60px',
               color: 'var(--primary-color)',
-              fontSize: '2em',
+              fontSize: window.innerWidth <= 768 ? '1.2em' : '2em',
               cursor: 'pointer',
               transition: 'all 0.3s ease',
               zIndex: 10,

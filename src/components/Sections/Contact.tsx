@@ -81,10 +81,11 @@ const Contact: React.FC = () => {
         {/* Cards de contato */}
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-          gap: '40px',
+          gridTemplateColumns: window.innerWidth <= 768 ? '1fr' : 'repeat(auto-fit, minmax(300px, 1fr))',
+          gap: window.innerWidth <= 768 ? '20px' : '40px',
           marginBottom: '60px',
-          animation: 'fadeInUp 1.4s ease-out'
+          animation: 'fadeInUp 1.4s ease-out',
+          padding: window.innerWidth <= 768 ? '0 10px' : '0'
         }}>
           {/* WhatsApp Card */}
           <div style={{
@@ -230,10 +231,11 @@ const Contact: React.FC = () => {
         {/* Informações adicionais */}
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-          gap: '30px',
+          gridTemplateColumns: window.innerWidth <= 768 ? '1fr' : 'repeat(auto-fit, minmax(250px, 1fr))',
+          gap: window.innerWidth <= 768 ? '20px' : '30px',
           marginBottom: '60px',
-          animation: 'fadeInUp 1.6s ease-out'
+          animation: 'fadeInUp 1.6s ease-out',
+          padding: window.innerWidth <= 768 ? '0 10px' : '0'
         }}>
           <div style={{ textAlign: 'center' }}>
             <div style={{

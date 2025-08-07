@@ -116,7 +116,7 @@ const Services: React.FC = () => {
         {/* Header da seção */}
         <div style={{ marginBottom: '80px' }}>
           <h2 style={{
-            fontSize: '4em',
+            fontSize: window.innerWidth <= 768 ? '2.5em' : window.innerWidth <= 1024 ? '3.2em' : '4em',
             fontWeight: '800',
             background: 'linear-gradient(45deg, var(--primary-color), var(--secondary-color))',
             WebkitBackgroundClip: 'text',
@@ -155,9 +155,10 @@ const Services: React.FC = () => {
         {/* Carrossel de serviços */}
         <div style={{
           position: 'relative',
-          maxWidth: '900px',
+          maxWidth: window.innerWidth <= 768 ? '100%' : '900px',
           margin: '0 auto',
-          animation: 'fadeInUp 1.4s ease-out'
+          animation: 'fadeInUp 1.4s ease-out',
+          padding: window.innerWidth <= 768 ? '0 10px' : '0'
         }}>
           {/* Botões de navegação */}
           <button
@@ -165,16 +166,16 @@ const Services: React.FC = () => {
             disabled={isTransitioning}
             style={{
               position: 'absolute',
-              left: '-60px',
-              top: '50%',
-              transform: 'translateY(-50%)',
+              left: window.innerWidth <= 768 ? '10px' : '-60px',
+              top: window.innerWidth <= 768 ? '10px' : '50%',
+              transform: window.innerWidth <= 768 ? 'none' : 'translateY(-50%)',
               background: 'rgba(0, 255, 221, 0.1)',
               border: '2px solid var(--primary-color)',
               borderRadius: '50%',
-              width: '50px',
-              height: '50px',
+              width: window.innerWidth <= 768 ? '40px' : '50px',
+              height: window.innerWidth <= 768 ? '40px' : '50px',
               color: 'var(--primary-color)',
-              fontSize: '1.5em',
+              fontSize: window.innerWidth <= 768 ? '1.2em' : '1.5em',
               cursor: 'pointer',
               transition: 'all 0.3s ease',
               zIndex: 10,
@@ -200,16 +201,16 @@ const Services: React.FC = () => {
             disabled={isTransitioning}
             style={{
               position: 'absolute',
-              right: '-60px',
-              top: '50%',
-              transform: 'translateY(-50%)',
+              right: window.innerWidth <= 768 ? '10px' : '-60px',
+              top: window.innerWidth <= 768 ? '10px' : '50%',
+              transform: window.innerWidth <= 768 ? 'none' : 'translateY(-50%)',
               background: 'rgba(0, 255, 221, 0.1)',
               border: '2px solid var(--primary-color)',
               borderRadius: '50%',
-              width: '50px',
-              height: '50px',
+              width: window.innerWidth <= 768 ? '40px' : '50px',
+              height: window.innerWidth <= 768 ? '40px' : '50px',
               color: 'var(--primary-color)',
-              fontSize: '1.5em',
+              fontSize: window.innerWidth <= 768 ? '1.2em' : '1.5em',
               cursor: 'pointer',
               transition: 'all 0.3s ease',
               zIndex: 10,
