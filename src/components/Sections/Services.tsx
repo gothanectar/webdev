@@ -249,7 +249,7 @@ const Services: React.FC = () => {
                     background: service.popular 
                       ? 'linear-gradient(135deg, rgba(0, 255, 221, 0.1) 0%, rgba(255, 0, 204, 0.05) 100%)' 
                       : 'rgba(10, 10, 50, 0.8)',
-                    padding: '45px 35px',
+                    padding: '60px 35px 45px 35px',
                     border: service.popular 
                       ? '3px solid var(--primary-color)' 
                       : '2px solid rgba(0, 255, 221, 0.3)',
@@ -292,17 +292,47 @@ const Services: React.FC = () => {
                   borderRadius: '20px',
                   fontSize: '0.9em',
                   fontWeight: '700',
-                  boxShadow: '0 0 20px rgba(0, 255, 221, 0.5)'
+                  boxShadow: '0 0 20px rgba(0, 255, 221, 0.5)',
+                  zIndex: 10
                 }}>
                   ⭐ MAIS POPULAR
                 </div>
               )}
 
+              {/* Preço no topo */}
+              <div style={{
+                background: 'linear-gradient(135deg, var(--primary-color), var(--secondary-color))',
+                color: 'var(--background-color)',
+                padding: '20px 15px',
+                borderRadius: '20px 20px 0 0',
+                margin: '-45px -35px 25px -35px',
+                textAlign: 'center',
+                position: 'relative',
+                boxShadow: '0 5px 20px rgba(0, 255, 221, 0.3)'
+              }}>
+                <div style={{
+                  fontSize: '2.2em',
+                  fontWeight: '800',
+                  marginBottom: '5px',
+                  textShadow: '0 2px 4px rgba(0, 0, 0, 0.3)'
+                }}>
+                  {service.price}
+                </div>
+                <div style={{
+                  fontSize: '0.9em',
+                  opacity: '0.9',
+                  fontWeight: '500'
+                }}>
+                  Investimento inicial
+                </div>
+              </div>
+
               {/* Ícone */}
               <div style={{
-                fontSize: '4em',
+                fontSize: '3.5em',
                 marginBottom: '20px',
-                filter: 'drop-shadow(0 0 10px rgba(0, 255, 221, 0.5))'
+                filter: 'drop-shadow(0 0 10px rgba(0, 255, 221, 0.5))',
+                textAlign: 'center'
               }}>
                 {service.icon}
               </div>
@@ -311,9 +341,10 @@ const Services: React.FC = () => {
               <h3 style={{
                 color: 'var(--primary-color)',
                 marginBottom: '8px',
-                fontSize: '2.2em',
+                fontSize: '2em',
                 fontWeight: '700',
-                textShadow: '0 0 15px rgba(0, 255, 221, 0.3)'
+                textShadow: '0 0 15px rgba(0, 255, 221, 0.3)',
+                textAlign: 'center'
               }}>
                 {service.title}
               </h3>
@@ -321,9 +352,10 @@ const Services: React.FC = () => {
               <h4 style={{
                 color: 'var(--secondary-color)',
                 marginBottom: '20px',
-                fontSize: '1.3em',
+                fontSize: '1.2em',
                 fontWeight: '500',
-                opacity: '0.9'
+                opacity: '0.9',
+                textAlign: 'center'
               }}>
                 {service.subtitle}
               </h4>
@@ -362,23 +394,7 @@ const Services: React.FC = () => {
                 ))}
               </div>
 
-              {/* Preço */}
-              <div style={{
-                background: 'rgba(0, 255, 221, 0.1)',
-                padding: '15px',
-                borderRadius: '15px',
-                marginBottom: '25px',
-                border: '1px solid rgba(0, 255, 221, 0.3)'
-              }}>
-                <div style={{
-                  color: 'var(--primary-color)',
-                  fontSize: '1.8em',
-                  fontWeight: '700',
-                  textShadow: '0 0 10px rgba(0, 255, 221, 0.3)'
-                }}>
-                  {service.price}
-                </div>
-              </div>
+
 
               {/* Botão CTA */}
               <a
