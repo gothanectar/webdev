@@ -249,7 +249,7 @@ const Services: React.FC = () => {
                     background: service.popular 
                       ? 'linear-gradient(135deg, rgba(0, 255, 221, 0.1) 0%, rgba(255, 0, 204, 0.05) 100%)' 
                       : 'rgba(10, 10, 50, 0.8)',
-                    padding: '60px 35px 45px 35px',
+                    padding: '75px 35px 45px 35px',
                     border: service.popular 
                       ? '3px solid var(--primary-color)' 
                       : '2px solid rgba(0, 255, 221, 0.3)',
@@ -279,37 +279,36 @@ const Services: React.FC = () => {
                   : 'rgba(0, 255, 221, 0.3)';
               }}
             >
-              {/* Badge Popular */}
-              {service.popular && (
-                <div style={{
-                  position: 'absolute',
-                  top: '-15px',
-                  left: '50%',
-                  transform: 'translateX(-50%)',
-                  background: 'linear-gradient(45deg, var(--primary-color), var(--secondary-color))',
-                  color: 'var(--background-color)',
-                  padding: '8px 25px',
-                  borderRadius: '20px',
-                  fontSize: '0.9em',
-                  fontWeight: '700',
-                  boxShadow: '0 0 20px rgba(0, 255, 221, 0.5)',
-                  zIndex: 10
-                }}>
-                  ⭐ MAIS POPULAR
-                </div>
-              )}
-
               {/* Preço no topo */}
               <div style={{
                 background: 'linear-gradient(135deg, var(--primary-color), var(--secondary-color))',
                 color: 'var(--background-color)',
-                padding: '20px 15px',
+                padding: service.popular ? '30px 15px 20px 15px' : '20px 15px',
                 borderRadius: '20px 20px 0 0',
-                margin: '-45px -35px 25px -35px',
+                margin: '-60px -35px 25px -35px',
                 textAlign: 'center',
                 position: 'relative',
                 boxShadow: '0 5px 20px rgba(0, 255, 221, 0.3)'
               }}>
+                {/* Badge Popular dentro do header */}
+                {service.popular && (
+                  <div style={{
+                    position: 'absolute',
+                    top: '-12px',
+                    left: '50%',
+                    transform: 'translateX(-50%)',
+                    background: 'rgba(255, 255, 255, 0.95)',
+                    color: 'var(--primary-color)',
+                    padding: '6px 20px',
+                    borderRadius: '15px',
+                    fontSize: '0.8em',
+                    fontWeight: '700',
+                    boxShadow: '0 4px 15px rgba(0, 0, 0, 0.2)',
+                    border: '2px solid var(--primary-color)'
+                  }}>
+                    ⭐ MAIS POPULAR
+                  </div>
+                )}
                 <div style={{
                   fontSize: '2.2em',
                   fontWeight: '800',
